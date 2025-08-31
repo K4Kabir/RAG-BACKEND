@@ -38,7 +38,7 @@ const upload = multer({
   },
 });
 
-app.use(cors());
+app.use(cors({ origin: "*" }));
 app.use(bodyParser.json());
 
 // Store vector stores in memory (in production, use a persistent database)
@@ -206,5 +206,5 @@ app.use((error, req, res, next) => {
 });
 
 app.listen(8000, () => {
-  console.log("Server is running on port 8000");
+  console.log("Server is running");
 });
