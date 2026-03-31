@@ -75,7 +75,7 @@ app.post("/upload-pdf", upload.single("pdf"), async (req, res) => {
 
     // Create embeddings
     const embeddings = new GoogleGenerativeAIEmbeddings({
-      model: "text-embedding-001",
+      model: "gemini-embedding-001",
       taskType: TaskType.RETRIEVAL_DOCUMENT,
       title: req.file.originalname,
       apiKey: process.env.GOOGLE,
